@@ -2,12 +2,13 @@
 
 <h3>Gallery</h3>
 
-<% woodarts.forEach(woodarts=> { %>
+<% woodarts.forEach(woodart=> { %>
     <div class="card" style="width: 18rem;">
-      <img src="<%= woodarts.imageUrl %>" class="card-img-top" alt="...">
+      <img src="<%= woodart.imageUrl %>" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title"><%= woodarts.title %> </h5>
-        <p class="card-text">Released: <%= woodarts.created %></p>
+        <h5 class="card-title"><%= woodart.title %> </h5>
+        <p class="card-text">Released: <%= woodart.created %></p>
+        <a href="/woodarts/<%= woodart._id%> " class="btn btn-primary">Details</a>
       </div>
     </div>
 <% }) %>

@@ -24,7 +24,7 @@ function newWoodart(req, res) {
 
 function show(req, res){
     Woodart.findById(req.params.id, function(err, woodart) {
-        res.render('woodarts/show', {title: 'New Art', woodart, user: req.user})
+        res.render('woodarts/show', {title: 'Title', woodart, user: req.user})
     })
 
 }
