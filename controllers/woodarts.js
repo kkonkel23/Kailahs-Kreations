@@ -13,7 +13,6 @@ function create(req, res) {
     const woodart = new Woodart(req.body)
     woodart.save(function(err) {
         if (err) return res.render('woodarts/new')
-        // res.redirect('/movies')
         res.redirect('/woodarts');
     })
 }
@@ -26,7 +25,6 @@ function show(req, res){
     Woodart.findById(req.params.id, function(err, woodart) {
         res.render('woodarts/show', {title: 'Title', woodart, user: req.user})
     })
-
 }
 
 function index(req, res) {

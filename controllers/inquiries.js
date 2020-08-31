@@ -18,7 +18,13 @@ function create(req,res){
             pass: GMAIL_PASS
         }
     })
-    SMTPTransport.sendMail(inquiries, (error, response) => {
+    const mailOpt = {
+        from: '',
+        to: GMAIL_USER,
+        subject: `New inquiry from ${req.body.name}`,
+        text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`
+    }
+    SMTPTransport.sendMail(mailOpt, (error, response) => {
         if (error) {
             console.log('contact-failure')
         } else {
