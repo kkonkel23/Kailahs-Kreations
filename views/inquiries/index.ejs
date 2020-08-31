@@ -2,7 +2,14 @@
 
 <h3>Make an Inquiry!</h3>
 
-<form action="">
+<form action="/inquiries">
+    <label>Name:</label>
+    <input name="name" type="text" placeholder="Your name" required>
+    <label>Email:</label>
+    <input type="text" name="sender" placeholder="Your email" required>
+    <label>Message</label>
+    <input type="text" name="message" placeholder="Enter your message here" rows="4" required>
+    <button type="submit">Send Email</button>
 
 </form>
 
