@@ -1,10 +1,14 @@
 const router = require('express').Router()
 const woodartsCtrl = require('../controllers/woodarts')
 
-router.get('/new', woodartsCtrl.new)
+router.get('/new', isLoggedIn, woodartsCtrl.new)
 router.post('/', woodartsCtrl.create)
 router.get('/', woodartsCtrl.index)
-router.get('/:id', woodartsCtrl.show)
 
+
+function isLoggedIn(req, res, next) {
+    if (req.isAuthenticated()) return next();
+    res.redirect("/auth/google");
+}
 
 module.exports = router;

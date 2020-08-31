@@ -5,7 +5,6 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const passport = require('passport');
 const nodemailer = require('nodemailer');
-const bodyParser = require('body-parser')
 
 
 // load the env vars
@@ -24,6 +23,7 @@ const authRouter = require('./routes/auth');
 const woodartsRouter = require('./routes/woodarts')
 const inquiriesRouter = require('./routes/inquiries')
 const reviewsRouter = require('./routes/reviews')
+const nodemailRouter = require('./routes/nodemail')
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -39,9 +39,7 @@ app.use(session({
   resave: false,
   saveUninitialized: true
 }));
-app.use(bodyParser.urlencoded({
-  extended: true
-}));
+
 
 app.use(passport.initialize());
 app.use(passport.session());
@@ -52,6 +50,7 @@ app.use('/auth', authRouter)
 app.use('/woodarts', woodartsRouter)
 app.use('/inquiries', inquiriesRouter)
 app.use('/', reviewsRouter)
+app.use('/nodemail', nodemailRouter)
 
 // invalid request, send 404 page
 app.use(function(req, res) {

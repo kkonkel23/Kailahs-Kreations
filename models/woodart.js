@@ -14,6 +14,7 @@ const woodartSchema = new Schema({
     created: String,
     imageUrl: String,
     description: String,
+    favoritedBy: [{ type: Schema.Types.ObjectId, ref: 'User'}],
     reviews: [reviewSchema]
 }, {
     timestamps: true

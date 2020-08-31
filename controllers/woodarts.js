@@ -5,9 +5,9 @@ module.exports = {
     index,
     show,
     new: newWoodart,
-    create
-
+    create,
 }
+
 
 function create(req, res) {
     const woodart = new Woodart(req.body)
