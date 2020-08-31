@@ -9,7 +9,7 @@ function sendTestMail(req,res){
     res.redirect('/inquiries')
 }
 
-function sendMail(subject, message, sender){
+function sendMail(subject, name, email, message){
     let transporter = nodemailer.createTransport({
         host: 'smtp.gmail.com',
         port: 465,
@@ -23,6 +23,6 @@ function sendMail(subject, message, sender){
         from: 'kailahkonkel@gmail.com',
         to: 'kailahkonkel@gmail.com',
         subject: `${subject}`,
-        text: `${message}`
+        text: `${req.body.name} (${req.body.email}) message: ${req.body.message}`
     })
 }
