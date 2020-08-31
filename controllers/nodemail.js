@@ -5,7 +5,7 @@ module.exports = {
 }
 
 function sendTestMail(req,res){
-    sendMail(req.body.subject, req.body.message, req.body.sender)
+    sendMail(req.body.subject, req.body.message, req.body.email, req.body.name)
     res.redirect('/inquiries')
 }
 
@@ -23,6 +23,6 @@ function sendMail(subject, name, email, message){
         from: 'kailahkonkel@gmail.com',
         to: 'kailahkonkel@gmail.com',
         subject: `${subject}`,
-        text: `${req.body.name} (${req.body.email}) message: ${req.body.message}`
+        text: `${name} (${email}) message: ${message}`
     })
 }
