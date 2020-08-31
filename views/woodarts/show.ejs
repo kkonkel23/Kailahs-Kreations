@@ -2,12 +2,64 @@
 
 <h3>show page</h3>
 
-<div>Title: </div>
-<div><%= woodart.title %></div>
-<div>Created: </div>
-<div><%= woodart.created %></div>
-<div>Description: </div>
-<div><%= woodart.description%></div>
-<img src="<%= woodart.imageUrl %> " alt="">
+<div class="show-page">
+    <div>Title: </div>
+    <div><%= woodart.title %></div>
+    <div>Created: </div>
+    <div><%= woodart.created %></div>
+    <div>Description: </div>
+    <div><%= woodart.description%></div>
+</div>
+<img id="details-img" src="<%= woodart.imageUrl %> " alt="">
 
+<h2>Reviews</h2>
+<div class="show-page">
+    <form id="add-review-form" method="POST" action="/woodarts/<%= woodart._id %>/reviews">
+      <label>Reviewer:</label>
+      <input type="text" name="reviewer">
+      <label>Review:</label>
+      <textarea name="content"></textarea>
+      <label>Rating:</label>
+      <select name="rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <input type="submit" value="Add Review">
+    </form>
+</div>
+
+<% if (woodart.reviews.length) { %>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Reviewer</th>
+          <th>Review</th>
+          <th>Rating</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% let total = 0 %>
+        <% woodart.reviews.forEach(function(w) { %>
+          <% total += w.rating %>
+          <tr>
+            <td><%= w.createdAt.toLocaleDateString() %></td>
+            <td><%= w.reviewer %></td>
+            <td><%= w.content %></td>
+            <td><%= w.rating %></td>
+          </tr>
+        <% }); %>
+        <tr>
+          <td colspan="2"></td>
+          <td><strong><%= (total / woodart.reviews.length).toFixed(1) %></strong></td>
+        </tr>
+      </tbody>
+    </table>
+<% } else { %>
+    <h5>No Reviews Yet</h5>
+<% } %>
+  
 <%- include('../partials/footer') %>
