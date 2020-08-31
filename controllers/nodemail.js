@@ -23,6 +23,8 @@ function sendMail(subject, name, email, message){
         from: 'kailahkonkel@gmail.com',
         to: 'kailahkonkel@gmail.com',
         subject: `${subject}`,
-        text: `${name} (${email}) message: ${message}`
+        text: `${name} 
+        
+        From:(${email})${message}`
     })
 }
