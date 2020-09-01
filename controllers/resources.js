@@ -11,8 +11,8 @@ function newResource(req, res) {
 }
 
 function create(req, res) {
-    const woodart = new Woodart(req.body)
-    woodart.save(function(err) {
+    const resource = new Resource(req.body)
+    resource.save(function(err) {
         if (err) return res.render('resources/new')
         res.redirect('/resources');
     })
