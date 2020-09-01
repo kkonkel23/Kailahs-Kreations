@@ -5,12 +5,11 @@
 <a href="/woodarts/new" class="btn btn-primary">Add New Piece</a>
 
 <% woodarts.forEach(woodart=> { %>
-    <div class="card bg-dark text-white" style="width: 20rem;">
+    <div class="card bg-dark text-white" id="card-div" style="width: 20rem;">
         <img src="<%= woodart.imageUrl %>" class="card-img" alt="...">
-        <div class="card-img-overlay">
+        <div class="card-img-overlay" id="card-content">
             <h5 class="card-title"><%= woodart.title %></h5>
-            <p class="card-text">Created: <%= woodart.created %></p>
-            <a href="/woodarts/<%= woodart._id%>" class="btn btn-primary">Details</a>
+            <a href="/woodarts/<%= woodart._id%>" id="details-btn" class="btn btn-primary">Details</a>
         </div>
     </div>
 <% }) %>
