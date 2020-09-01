@@ -24,6 +24,7 @@ const woodartsRouter = require('./routes/woodarts')
 const inquiriesRouter = require('./routes/inquiries')
 const reviewsRouter = require('./routes/reviews')
 const nodemailRouter = require('./routes/nodemail')
+const resourcesRouter = require('./routes/resources')
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -51,6 +52,7 @@ app.use('/woodarts', woodartsRouter)
 app.use('/inquiries', inquiriesRouter)
 app.use('/', reviewsRouter)
 app.use('/nodemail', nodemailRouter)
+app.use('/resources', resourcesRouter)
 
 // invalid request, send 404 page
 app.use(function(req, res) {
