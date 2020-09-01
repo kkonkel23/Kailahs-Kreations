@@ -4,6 +4,7 @@ const woodartsCtrl = require('../controllers/woodarts')
 router.get('/new', isLoggedIn, woodartsCtrl.new)
 router.post('/', woodartsCtrl.create)
 router.get('/', woodartsCtrl.index)
+router.get('/:id', woodartsCtrl.show)
 
 
 function isLoggedIn(req, res, next) {
