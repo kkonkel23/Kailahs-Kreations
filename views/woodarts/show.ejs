@@ -1,13 +1,10 @@
 <%- include('../partials/header') %>
 
-<h3>show page</h3>
+<h3><%= woodart.title %> </h3>
 
 <div class="show-page">
-    <div>Title: </div>
-    <div><%= woodart.title %></div>
     <div>Created: </div>
     <div><%= woodart.created %></div>
-    <div>Description: </div>
     <div><%= woodart.description%></div>
 </div>
 <img id="details-img" src="<%= woodart.imageUrl %>" alt="">
