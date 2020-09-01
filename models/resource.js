@@ -1,12 +1,13 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const blogScema = new Schema ({
+const resourceSchema = new Schema ({
     title: String,
-    posted: Date,
-    content: String
+    description: String,
+    link: String,
+    imageUrl: String
 }, {
     timestamps: true
 })
 
-module.exports = mongoose.model('Blog', blogSchema)
+module.exports = mongoose.model('Resource', resourceSchema)

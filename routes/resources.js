@@ -1,7 +1,7 @@
 const router = require('express').Router();
-const blogsCtrl = require('../controllers/resources')
+const resourcesCtrl = require('../controllers/resources')
 
-router.get('/', isLoggedIn, blogsCtrl.index)
+router.get('/', isLoggedIn, resourcesCtrl.index)
 
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) return next();
