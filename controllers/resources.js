@@ -21,6 +21,6 @@ function create(req, res) {
 function index(req, res) {
     Resource.find({})
     .then(resources => {
-      res.render('resources/index', { title: 'Resources', user: req.user })
+      res.render('resources/index', { title: 'Resources', user: req.user, resources })
     })
 }
