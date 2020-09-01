@@ -3,6 +3,7 @@ body {
   background-image: url(https://i.imgur.com/Iv7MZaJ.png);
   background-repeat: no-repeat;
   
+  
 }
 
 .brand-logo {
@@ -13,9 +14,7 @@ body {
   margin-bottom: 10px;
 }
 
-#search-row form {
-  padding-top: 20px;
-}
+
 
 nav {
   display: flex;
@@ -28,10 +27,21 @@ nav {
   justify-self: flex-end;
 }
 
+.nav-image {
+  height: 30px;
+  width: 75px;
+  display: flex;
+  justify-content: start;
+}
+
 #details-img {
   height: 600px;
   width: 450px;
   margin-left: 15px;
+}
+
+a {
+  color: #AE9152;
 }
 
 .show-page {
