@@ -1,3 +1,10 @@
+body {
+  background-color: #BFD9D7;
+  background-image: url(https://i.imgur.com/Iv7MZaJ.png);
+  background-repeat: no-repeat;
+  
+}
+
 .brand-logo {
   margin-left: 15px;
 }
