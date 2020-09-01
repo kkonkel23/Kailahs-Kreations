@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const blogsCtrl = require('../controllers/blogs')
+const blogsCtrl = require('../controllers/resources')
 
 router.get('/', isLoggedIn, blogsCtrl.index)
 
