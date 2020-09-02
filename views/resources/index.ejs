@@ -2,18 +2,31 @@
 
 <h3>Resources Page</h3>
 <a href="/resources/new" class="btn btn-primary">Add New Resource</a>
-<div class="resource-container">
+
+<% resources.forEach(resource => { %>
+    <div class="card bg-dark text-white" id="card-div" style="width: 20rem;">
+        <img src="<%= resource.imageUrl %>" class="card-img" alt="...">
+        <h5 class="resource-title"><%= resource.title %> </h5>
+        <div class="card-img-overlay" id="resource-content">
+            <p class="card-description"><%= resource.description %> </p>
+            <a href="<%= resource.link%>" class="btn btn-primary">Check out this resource!</a>
+        </div>
+    </div>
+<% }) %>
+
+
+
+<!-- <div class="resource-container">
     <% resources.forEach(resource => { %>
         <div class="card" style="width: 18rem;">
           <img src="<%= resource.imageUrl %>" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title"><%= resource.title %> </h5>
             <p class="card-text"><%= resource.description %></p>
-            <a href="<%= resource.link%>" class="btn btn-primary">Check out this resource!</a>
           </div>
         </div>
     <% }) %>
-</div>
+</div> -->
 
 
 <%- include('../partials/footer') %>

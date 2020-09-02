@@ -71,8 +71,7 @@ a {
   margin: 10px 10px;
 }
 
-#card-content {
-  
+#card-content, #resource-content {
   text-align: center;
   top: 0;
   bottom: 0;
@@ -85,8 +84,13 @@ a {
   background-color: gray;
 }
 
+
 #card-div:hover #card-content {
   opacity: 0.80;
+}
+
+#card-div:hover #resource-content {
+  opacity: 0.95;
 }
 
 .card-title{
