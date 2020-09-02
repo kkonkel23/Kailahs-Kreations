@@ -42,6 +42,10 @@ a {
   color: #AE9152;
 }
 
+a:hover {
+  color: black;
+}
+
 .google-nav {
   display: block;
   margin-left: auto;
