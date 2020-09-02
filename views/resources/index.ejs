@@ -1,18 +1,19 @@
 <%- include('../partials/header') %>
 
-<h3>Resources Page</h3>
+<h3>Resources</h3>
 <a href="/resources/new" class="btn btn-primary">Add New Resource</a>
-
-<% resources.forEach(resource => { %>
-    <div class="card bg-dark text-white" id="card-div" style="width: 20rem;">
-        <img src="<%= resource.imageUrl %>" class="card-img" alt="...">
-        <h5 class="resource-title"><%= resource.title %> </h5>
-        <div class="card-img-overlay" id="resource-content">
-            <p class="card-description"><%= resource.description %> </p>
-            <a href="<%= resource.link%>" class="btn btn-primary">Check out this resource!</a>
+<div class="resource-container">
+    <% resources.forEach(resource => { %>
+        <div class="card bg-dark text-white" id="card-div" style="width: 20rem;">
+            <img src="<%= resource.imageUrl %>" class="card-img" alt="...">
+            <h5 class="resource-title"><%= resource.title %> </h5>
+            <div class="card-img-overlay" id="resource-content">
+                <p class="card-description"><%= resource.description %> </p>
+                <a href="<%= resource.link%>" class="btn btn-primary">Check out this resource!</a>
+            </div>
         </div>
-    </div>
-<% }) %>
+    <% }) %>
+</div>
 
 
 

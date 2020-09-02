@@ -10,7 +10,7 @@ body {
   background-size: cover;
   margin: 0;
   height: 100vh;
-  
+  font-weight: bold;
 }
 
 body > nav {
@@ -36,6 +36,7 @@ body > nav {
 
 .card .card-content .card-title {
   margin-bottom: 10px;
+  text-align: center;
 }
 
 h3 {
@@ -67,11 +68,6 @@ label {
   margin-left: auto;
 }
 
-#details-img {
-  height: 600px;
-  width: 450px;
-  margin-left: 15px;
-}
 
 #home-page {
   display: flex;
@@ -90,14 +86,42 @@ label {
   margin-top: 30px;
 }
 
-.show-page {
-  float: right;
-  margin-bottom: 20px;
-
+.show-page-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
+#details-img {
+  height: 600px;
+  width: 450px;
+  margin-left: 15px;
+  margin-right: 15px;
+  border-radius: 5px;
+}
+
+.details-text {
+  text-align: center;
+}
+
+table {
+  margin: auto;
+}
+
+table thead th {
+  padding: 5px;
+}
+
+table td {
+  padding: 10px;
+  text-align: center;
+}
 .resource-container {
+  display: flex;
+  justify-content: center;
   max-width: 1200px;
+  margin: auto;
+  
 }
 
 .card {
@@ -144,6 +168,7 @@ label {
 }
 
 #details-btn {
+  vertical-align: baseline;
   margin-bottom: 20px;
   background-color: gray;
 }
