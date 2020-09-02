@@ -9,27 +9,38 @@
     <title><%= title %></title>
 </head>
 <body>
+
     <nav>
         <ul class="nav justify-content-center">
-            <li class="nav-image">
-                <a class="nav-link active" href="/"><img class="nav-image" src="https://i.imgur.com/GJ2TT9K.png"></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/woodarts">Gallery</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/inquiries">Make An Inquiry</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/resources">Resources</a>
-            </li>
-            <li class="nav-item">
-                <% if (user) { %>
-                    <a class="google-nav" href="/auth/logout">Log Out</a>
-                <% } else { %>
-                    <a class="google-nav" href="/auth/google">Login with Google</a>
-                <% } %>
-            </li>
+            <div>
+                <li class="nav-image">
+                    <a class="nav-link active" href="/"><img class="nav-image" src="https://i.imgur.com/RF3QPgp.png"></a>
+                </li>
+            </div>
+            <div>
+                <li class="nav-item">
+                    <a class="nav-link" href="/woodarts">Gallery</a>
+                </li>
+            </div>
+            <div>
+                <li class="nav-item">
+                    <a class="nav-link" href="/inquiries">Make An Inquiry</a>
+                </li>
+            </div>
+            <div>
+                <li class="nav-item">
+                    <a class="nav-link" href="/resources">Resources</a>
+                </li>
+            </div>
+            <div>
+                <li class="google-nav">
+                    <% if (user) { %>
+                        <a class="google-nav" href="/auth/logout">Log Out</a>
+                    <% } else { %>
+                        <a class="google-nav" href="/auth/google">Login with Google</a>
+                    <% } %>
+                </li>
+            </div>
         </ul>
     </nav>
     

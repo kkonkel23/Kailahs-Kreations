@@ -1,6 +1,6 @@
+
 body {
   background-repeat: repeat;
-  position: fixed;
   font-family: 'Montserrat', sans-serif;
   background-color: #BFD9D7;
   background-image: url(https://i.imgur.com/BZhXMxC.jpg);
@@ -8,12 +8,29 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  grid-template-areas:
+    "nav"
+    "main"
 }
 
-/* html { 
-  background: url(https://i.imgur.com/CaOevs7.png) no-repeat center center fixed; 
-} */
+body > nav {
+  grid-area: nav;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px 0 30px;
+  margin-top: 40px;
+}
+
+nav > img {
+  width: 34px;
+  object-fit: contain;
+  margin-right: auto;
+}
 
 .brand-logo {
   margin-left: 15px;
@@ -23,22 +40,20 @@ body {
   margin-bottom: 10px;
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-  margin-top: 15px;
+a {
+  color: #AE9152;
 }
 
-.nav-google {
-  display: flex;
-  justify-self: flex-end;
+.google-nav {
+  color: black;
+  display: block;
+  margin-left: auto;
 }
 
 .nav-image {
-  height: 30px;
-  width: 75px;
-  display: flex;
-  justify-content: start;
+  height: 70px;
+  width: 100px;
+  float: left;
 }
 
 #details-img {
@@ -47,14 +62,22 @@ nav {
   margin-left: 15px;
 }
 
-a {
-  color: #AE9152;
-}
 
 .show-page {
   float: right;
   margin-bottom: 20px;
 
+}
+
+.resource-container {
+  max-width: 1200px;
+}
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  margin: 10px 10px;
 }
 
 #card-content {
@@ -92,4 +115,9 @@ a {
 #details-btn {
   margin-bottom: 20px;
   background-color: gray;
+}
+
+.inquiry-form {
+  display: block;
+  text-align: center;
 }
