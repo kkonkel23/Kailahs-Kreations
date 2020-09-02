@@ -10,26 +10,24 @@ body {
   background-size: cover;
   margin: 0;
   height: 100vh;
-  display: grid;
-  grid-template-rows: 50px 1fr;
-  grid-template-areas:
-    "nav"
-    "main"
+  
 }
 
 body > nav {
   grid-area: nav;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   padding: 0 20px 0 30px;
-  margin-top: 40px;
+  margin-top: 5px;
 }
 
-nav > img {
-  width: 34px;
+.nav-image {
   object-fit: contain;
   margin-right: auto;
+  height: 70px;
+  width: 100px;
+  float: left;
 }
 
 .brand-logo {
@@ -45,15 +43,8 @@ a {
 }
 
 .google-nav {
-  color: black;
   display: block;
   margin-left: auto;
-}
-
-.nav-image {
-  height: 70px;
-  width: 100px;
-  float: left;
 }
 
 #details-img {

@@ -11,10 +11,21 @@
 <body>
 
     <nav>
+        <a class="nav-link active" href="/"><img class="nav-image" src="https://i.imgur.com/RF3QPgp.png"></a>
+        <a class="nav-link" href="/woodarts">Gallery</a>
+        <a class="nav-link" href="/inquiries">Make An Inquiry</a>
+        <a class="nav-link" href="/resources">Resources</a>
+        <% if (user) { %>
+            <a class="google-nav" href="/auth/logout">Log Out</a>
+        <% } else { %>
+            <a class="google-nav" href="/auth/google">Login with Google</a>
+        <% } %>
+    </nav>
+
+    <!-- <nav>
         <ul class="nav justify-content-center">
             <div>
                 <li class="nav-image">
-                    <a class="nav-link active" href="/"><img class="nav-image" src="https://i.imgur.com/RF3QPgp.png"></a>
                 </li>
             </div>
             <div>
@@ -42,6 +53,6 @@
                 </li>
             </div>
         </ul>
-    </nav>
+    </nav> -->
     
     
