@@ -2,17 +2,31 @@
 
 <h3>Make an Inquiry!</h3>
 
-<div class="inquiry-form">
-    <form action="/nodemail" method="POST">
-        <label>Email: </label>
-        <input type="text" name="email" placeholder="Your email here" required>
-        <label>Name: </label>
-        <input type="text" name="name" placeholder="Your name here" required>
-        <label>Subject: </label>
-        <input type="text" name="subject" placeholder="New Inquiry" required>
-        <label>Message: </label>
-        <input type="text" name="message" placeholder="Type your message..." required>
-        <input type="submit" value="Send Email">
+<div class="inquiry-div">
+    <form id="inquiry-form" action="/nodemail" method="POST">
+        <div class="form-item">
+            <label>Email: </label>
+            <input type="text" name="email" placeholder="Your email here" required>
+            <br>
+        </div>
+        <div class="form-item">
+            <label>Name: </label>
+            <input type="text" name="name" placeholder="Your name here" required>
+            <br>
+        </div>
+        <div class="form-item">
+            <label>Subject: </label>
+            <input type="text" name="subject" placeholder="New Inquiry" required>
+            <br>
+        </div>
+        <div class="form-item">
+            <label>Message: </label>
+            <textarea name="message" cols="30" rows="4" placeholder="Type your message..." required></textarea>
+            <br>
+        </div>
+        <div class="form-item">
+            <input type="submit" value="Send Email">
+        </div>
     </form>
 </div>
 
