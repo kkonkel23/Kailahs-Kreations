@@ -68,6 +68,22 @@ label {
   margin-left: 15px;
 }
 
+.home-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.logo-img {
+  width: fit-content;
+  margin: auto;
+}
+
+.insta-link {
+  margin-top: 30px;
+}
 
 .show-page {
   float: right;
