@@ -2,16 +2,41 @@
 
 <h3>Edit <%= woodart.title %> </h3>
 
-<form action="/woodarts/<%= woodart.id %>?_method=PUT" method="POST">
+<div class="edit-art-div">
+    <form id="edit-art-form" action="/woodarts/<%= woodart.id %>?_method=PUT" method="POST">
+        <div class="form-item">
+            <label>Title:</label>
+            <input type="text" name="title" value="<%= woodart.title %> ">
+            <br>
+        </div>
+        <div class="form-item">
+            <label>Created:</label>
+            <input type="text" name="created" value="<%= woodart.created %> ">
+            <br>
+        </div>
+        <div class="form-item">
+            <label>Image Url:</label>
+            <input type="text" name="imageUrl" value="<%= woodart.imageUrl %> ">
+            <br>
+        </div>
+        <div class="form-item">
+            <label class="description-label" for="description">Description: </label>
+            <textarea id="description" name="description" cols="30" rows="4" placeholder="<%= woodart.description %>"></textarea>
+            <br>
+        </div>
+        <div class="form-item">
+            <input type="submit" value="Add Piece">
+        </div>
+    </form>
+</div>
+
+<!-- <form action="/woodarts/<%= woodart.id %>?_method=PUT" method="POST">
     <label>Title:</label>
-    <input type="text" name="title" value="<%= woodart.title %> ">
     <label>Created:</label>
-    <input type="text" name="created" value="<%= woodart.created %> ">
     <label>Image Url:</label>
-    <input type="text" name="imageUrl" value="<%= woodart.imageUrl %> ">
     <label>Description:</label>
     <input type="text" name="description" value="<%= woodart.description %> ">
     <input type="submit" value="Add Piece">
-</form>
+</form> -->
 
 <%- include('../partials/footer') %>
