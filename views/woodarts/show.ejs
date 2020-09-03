@@ -5,6 +5,12 @@
 <div class="show-page-container" >
     <div class="details-img">
         <img id="details-img" src="<%= woodart.imageUrl %>" alt="">
+        <form action="/woodarts/<%= woodart.id %>/edit" method="GET">
+            <button class="btn">Edit Art</button>
+        </form>
+        <form action="/woodarts/<%= woodart.id %>?_method=DELETE" method="POST" id="delete">
+            <button class="btn">Delete Art</button>
+        </form>
     </div>
     <div class="details-text">
         <h5>Created: <%= woodart.created %></h5>
@@ -62,14 +68,14 @@
         </select>
         <br>
         <br>
-        <input type="submit" value="Add Review">
+        <input class="btn" type="submit" value="Add Review">
         </form>
-        <form action="/woodarts/<%= woodart.id %>/edit" method="GET">
-            <button>Edit Art</button>
+        <!-- <form action="/woodarts/<%= woodart.id %>/edit" method="GET">
+            <button class="btn">Edit Art</button>
         </form>
         <form action="/woodarts/<%= woodart.id %>?_method=DELETE" method="POST" id="delete">
-            <button>Delete Art</button>
-        </form>
+            <button class="btn">Delete Art</button>
+        </form> -->
     </div>
 </div>
 

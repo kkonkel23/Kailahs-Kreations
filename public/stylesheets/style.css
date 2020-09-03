@@ -112,6 +112,11 @@ label {
   text-align: center;
 }
 
+.show-btn {
+  border-radius: 2px;
+
+}
+
 table {
   margin: auto;
 }
@@ -142,7 +147,7 @@ table td {
 }
 
 #card-content, #resource-content {
-  text-align: center;
+  text-align: absolute;
   top: 0;
   bottom: 0;
   left: 0;
@@ -178,13 +183,13 @@ table td {
 }
 
 #details-btn, #resources-btn {
-  vertical-align: baseline;
   margin-bottom: 20px;
   background-color: black;
   border: black;
+  color: white;
 }
 
-#main-page-btn {
+#main-page-btn, .btn {
   display: block;
   margin: 20px auto;
   width: fit-content;
@@ -192,6 +197,7 @@ table td {
   background-color: #BFD9D7;
   color: black;
   border: black;
+  font-weight: bold;
 }
 
 .inquiry-div, .new-art-div, .edit-art-div, .new-resource-div {
