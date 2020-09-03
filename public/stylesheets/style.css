@@ -183,9 +183,13 @@ table td {
   margin: 15px;
 }
 
+.message-label {
+  display: block;
+  margin-bottom: 10px;
+}
+
 .form-item {
   margin: 20px;
-  width: auto;
 }
 
 #message-input {
@@ -193,23 +197,22 @@ table td {
 }
 
 input {
-  align-items: center;
-  width: 250px;
+ width: 200px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .resource-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1100px) {
   .resource-container {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1400px) {
   .resource-container {
     grid-template-columns: repeat(4, 1fr);
   }
