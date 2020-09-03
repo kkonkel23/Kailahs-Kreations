@@ -1,0 +1,72 @@
+<%- include('../partials/header') %>
+
+<h3><%= resource.title %> </h3>
+
+<div class="show-page-container" >
+    <div class="details-img">
+        <img id="details-img" src="<%= resource.imageUrl %>" alt="">
+    </div>
+    <div class="details-text">
+        <a href="<%= resource.link %>">Check out this resource!</a>
+        <br>
+        <br>
+        <div><%= resource.description%></div>
+        <br>
+        <h2>Reviews</h2>
+        <br>
+        <% if (resource.reviews.length) { %>
+            <table>
+            <thead>
+                <tr>
+                <th>Date</th>
+                <th>Reviewer</th>
+                <th>Review</th>
+                <th>Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% let total = 0 %>
+                <% resource.reviews.forEach(function(r) { %>
+                <% total += r.rating %>
+                <tr>
+                    <td><%= r.createdAt.toLocaleDateString() %></td>
+                    <td><%= r.reviewer %></td>
+                    <td><%= r.content %></td>
+                    <td><%= r.rating %></td>
+                </tr>
+                <% }); %>
+                <tr>
+                <td colspan="2"></td>
+                <td><strong>Average Rating: <%= (total / resource.reviews.length).toFixed(1) %></strong></td>
+                </tr>
+            </tbody>
+            </table>
+        <% } else { %>
+            <h5>No Reviews Yet</h5>
+        <% } %>
+        <br>
+        <form id="add-review-form" method="POST" action="/resources/<%= resource._id %>/reviews">
+          <label>Reviewer:</label>
+          <input type="text" name="reviewer">
+          <br>
+          <br>
+          <label>Review:</label>
+          <textarea name="content"></textarea>
+          <br>
+          <label>Rating:</label>
+          <select name="rating">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <br>
+        <br>
+        <input type="submit" value="Add Review">
+        </form>
+    </div>
+</div>
+
+
+<%- include('../partials/footer') %>

@@ -9,6 +9,7 @@
             <div class="card-img-overlay" id="resource-content">
                 <p class="card-description"><%= resource.description %> </p>
                 <a href="<%= resource.link%>" class="btn btn-primary" id="resources-btn">Check out this resource!</a>
+                <a href="/resources/<%= resource._id%>" id="details-btn" class="btn btn-primary">Details</a>
             </div>
         </div>
         <% }) %>

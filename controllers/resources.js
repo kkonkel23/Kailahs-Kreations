@@ -3,7 +3,14 @@ const Resource = require('../models/resource')
 module.exports = {
     index,
     create,
-    new: newResource
+    new: newResource,
+    show
+}
+
+function show(req, res){
+    Resource.findById(req.params.id, function(err, resource) {
+        res.render('resources/show', {title: `${resource.title}`, resource, user: req.user})
+    })
 }
 
 function newResource(req, res) {
