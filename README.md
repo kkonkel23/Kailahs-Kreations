@@ -1,5 +1,5 @@
 # Kailahs Kreations
-* Woodburning art gallery website for my business that allows you to check my out work, leave reviews, leave inquiries, and find resources on learning to woodburn. 
+* Woodburning art gallery website for my business that allows you to check my out work, leave reviews, email me inquiries, and find resources on learning to woodburn. 
 
 ## Screenshots
 
