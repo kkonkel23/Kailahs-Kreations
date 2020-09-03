@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const passport = require('passport');
 const nodemailer = require('nodemailer');
+const methodOverride = require('method-override');
 
 
 // load the env vars
@@ -44,6 +45,7 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(methodOverride('_method'));
 
 // mount all routes with appropriate base paths
 app.use('/', usersRouter);

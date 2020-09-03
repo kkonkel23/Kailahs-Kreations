@@ -6,8 +6,28 @@ module.exports = {
     show,
     new: newWoodart,
     create,
+    delete: removeWoodart,
+    edit,
+    update
 }
 
+function update(req,res){
+    Woodart.findByIdAndUpdate(req.params.id, req.body, function(err, woodart) {
+        res.redirect(`/woodarts/${woodart._id}`)
+    })
+}
+
+function edit(req,res) {
+    Woodart.findById(req.params.id, function(err, woodart) {
+        res.render('woodarts/edit', {title: `${woodart.title}`, woodart, user: req.user})
+    })
+}
+
+function removeWoodart(req,res){
+    Woodart.findByIdAndRemove(req.params.id, function() {
+        res.redirect('/woodarts')
+    })
+}
 
 function create(req, res) {
     const woodart = new Woodart(req.body)

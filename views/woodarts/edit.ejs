@@ -1,0 +1,17 @@
+<%- include('../partials/header') %>
+
+<h3>Edit <%= woodart.title %> </h3>
+
+<form action="/woodarts/<%= woodart.id %>?_method=PUT" method="POST">
+    <label>Title:</label>
+    <input type="text" name="title" value="<%= woodart.title %> ">
+    <label>Created:</label>
+    <input type="text" name="created" value="<%= woodart.created %> ">
+    <label>Image Url:</label>
+    <input type="text" name="imageUrl" value="<%= woodart.imageUrl %> ">
+    <label>Description:</label>
+    <input type="text" name="description" value="<%= woodart.description %> ">
+    <input type="submit" value="Add Piece">
+</form>
+
+<%- include('../partials/footer') %>

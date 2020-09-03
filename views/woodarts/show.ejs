@@ -64,6 +64,12 @@
         <br>
         <input type="submit" value="Add Review">
         </form>
+        <form action="/woodarts/<%= woodart.id %>/edit" method="GET">
+            <button>Edit Art</button>
+        </form>
+        <form action="/woodarts/<%= woodart.id %>?_method=DELETE" method="POST" id="delete">
+            <button>Delete Art</button>
+        </form>
     </div>
 </div>
 

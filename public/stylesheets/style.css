@@ -116,8 +116,11 @@ table td {
   padding: 10px;
   text-align: center;
 }
+
 .resource-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: center;
   justify-content: center;
   max-width: 1200px;
   margin: auto;
@@ -192,4 +195,22 @@ table td {
 input {
   align-items: center;
   width: 250px;
+}
+
+@media (min-width: 600px) {
+  .resource-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1500px) {
+  .resource-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .resource-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
