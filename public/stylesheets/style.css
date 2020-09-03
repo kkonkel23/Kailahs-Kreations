@@ -176,24 +176,20 @@ table td {
   background-color: gray;
 }
 
-.inquiry-div {
+.inquiry-div, .new-art-div {
   display: flex;
   justify-content: center;
   text-align: center;
   margin: 15px;
 }
 
-.message-label {
+.message-label, .description-label {
   display: block;
   margin-bottom: 10px;
 }
 
 .form-item {
   margin: 20px;
-}
-
-#message-input {
-  height: 4em;
 }
 
 input {

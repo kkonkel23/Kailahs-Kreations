@@ -2,7 +2,35 @@
 
 <h3>New piece page</h3>
 
-<form id="new-form" action="/woodarts" method="POST">
+<div class="new-art-div">
+    <form id="new-art-form" action="/woodarts" method="POST">
+        <div class="form-item">
+            <label>Title:</label>
+            <input type="text" name="title">
+            <br>
+        </div>
+        <div class="form-item">
+            <label>Created:</label>
+            <input type="text" name="created">
+            <br>
+        </div>
+        <div class="form-item">
+            <label>Image Url:</label>
+            <input type="text" name="imageUrl">
+            <br>
+        </div>
+        <div class="form-item">
+            <label class="description-label" for="description">Message: </label>
+            <textarea id="description" name="description" cols="30" rows="4"></textarea>
+            <br>
+        </div>
+        <div class="form-item">
+            <input type="submit" value="Add Piece">
+        </div>
+    </form>
+</div>
+
+<!-- <form id="new-form" action="/woodarts" method="POST">
     <label>Title:</label>
     <input type="text" name="title">
     <label>Created:</label>
@@ -12,6 +40,8 @@
     <label>Description:</label>
     <input type="text" name="description">
     <input type="submit" value="Add Piece">
-  </form>
+  </form> -->
+
+  
 
 <%- include('../partials/footer') %>
