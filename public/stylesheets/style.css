@@ -43,6 +43,8 @@ h3 {
   text-align: center;
   font-size: 50px;
   margin-top: 20px;
+  margin-bottom: 25px;
+
 }
 
 p {
@@ -51,7 +53,7 @@ p {
 }
 
 a {
-  color: #AE9152;
+  color: #9b814b;
 }
 
 a:hover {
@@ -127,7 +129,6 @@ table td {
   justify-content: center;
   max-width: 1200px;
   margin: auto;
-  
 }
 
 .card {
@@ -147,7 +148,7 @@ table td {
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: gray;
+  background-color: rgb(134, 134, 134);
 }
 
 
@@ -173,13 +174,24 @@ table td {
   text-align: center;
 }
 
-#details-btn {
+#details-btn, #resources-btn {
   vertical-align: baseline;
   margin-bottom: 20px;
-  background-color: gray;
+  background-color: black;
+  border: black;
 }
 
-.inquiry-div, .new-art-div, .edit-art-div {
+#main-page-btn {
+  display: block;
+  margin: 20px auto;
+  width: fit-content;
+  text-align: center;
+  background-color: #BFD9D7;
+  color: black;
+  border: black;
+}
+
+.inquiry-div, .new-art-div, .edit-art-div, .new-resource-div {
   display: flex;
   justify-content: center;
   text-align: center;

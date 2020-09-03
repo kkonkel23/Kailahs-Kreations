@@ -2,16 +2,33 @@
 
 <h3>New piece page</h3>
 
-<form id="new-form" action="/resources" method="POST">
-    <label>Title: </label>
-    <input type="text" name="title">
-    <label>Description: </label>
-    <input type="text" name="description">
-    <label>Image Url: </label>
-    <input type="text" name="imageUrl">
-    <label>Resource Url: </label>
-    <input type="text" name="link">
-    <input type="submit" value="Add Resource">
-</form>
+<div class="new-resource-div">
+    <form id="new-resource-form" action="/resources" method="POST">
+        <div class="form-item">
+            <label>Title: </label>
+            <input type="text" name="title">
+            <br>
+        </div>
+        <div class="form-item">
+            <label>Image Url: </label>
+            <input type="text" name="imageUrl">
+            <br>
+        </div>
+        <div class="form-item">
+            <label>Resource Url: </label>
+            <input type="text" name="link">
+            <br>
+        </div>
+        <div class="form-item">
+            <label class="description-label" for="description">Description: </label>
+            <textarea id="description" name="description" cols="30" rows="4"></textarea>
+            <br>
+        </div>
+        <div class="form-item">
+            <input type="submit" value="Add Resource">
+        </div>
+    </form>
+</div>
+
 
 <%- include('../partials/footer') %>

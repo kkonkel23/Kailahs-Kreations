@@ -12,6 +12,7 @@
 * Mongoose
 * HTML/EJS 
 * CSS
+* Nodemailer
 
 
 ## Getting Started
