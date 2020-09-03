@@ -200,6 +200,11 @@ table td {
   font-weight: bold;
 }
 
+.btn:hover {
+  background-color: #b89a5d;
+  color: black;
+}
+
 .inquiry-div, .new-art-div, .edit-art-div, .new-resource-div {
   display: flex;
   justify-content: center;
