@@ -44,7 +44,7 @@ h3 {
   font-size: 50px;
   margin-top: 20px;
   margin-bottom: 25px;
-
+  color: #9b814b;
 }
 
 p {
@@ -54,6 +54,7 @@ p {
 
 a {
   color: #9b814b;
+  font-weight: bold;
 }
 
 a:hover {
@@ -70,7 +71,6 @@ label {
   margin-left: auto;
 }
 
-
 #home-page {
   display: flex;
   flex-direction: column;
@@ -86,9 +86,8 @@ label {
 
 #insta-img {
   margin-top: 30px;
-  height: 45px;
+  height: 55px;
   width: 55px;
-  background-color: white;
 }
 
 .show-page-container {
@@ -114,7 +113,6 @@ label {
 
 .show-btn {
   border-radius: 2px;
-
 }
 
 table {
@@ -149,7 +147,7 @@ table td {
 #card-content, #resource-content {
   display: grid;
   justify-content: center;
-  text-align: absolute;
+  text-align: center;
   top: 0;
   bottom: 0;
   left: 0;
@@ -185,11 +183,17 @@ table td {
 }
 
 #details-btn, #resources-btn {
+  position: relative;
   height: 40px;
-  margin-bottom: 5px;
+  margin-top: 10px;
   background-color: black;
   border: black;
   color: white;
+}
+
+#details-btn:hover, #resources-btn:hover {
+  background-color: white;
+  color: black;
 }
 
 #main-page-btn, .btn {
