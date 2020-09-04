@@ -8,12 +8,16 @@
 
 
 ## Technologies Used
-* Javascript
-* Express
+* NodeJs
+* ExpressJs
+* Express Generator
 * MongoDB
-* Mongoose
+* MongooseJS
+* MongoDB Atlas
 * HTML/EJS 
 * CSS
+* Google OAuth 2.0
+* PassportJS
 * Nodemailer
 
 
