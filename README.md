@@ -2,7 +2,9 @@
 * Woodburning art gallery website for my business that allows you to check my out work, leave reviews, email me inquiries, and find resources on learning to woodburn. 
 
 ## Screenshots
-
+![](https://i.imgur.com/9qMOexg.png)
+![](https://i.imgur.com/PmhoAWV.png)
+![](https://i.imgur.com/k9zBkL6.png)
 
 
 ## Technologies Used
