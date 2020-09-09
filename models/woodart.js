@@ -14,7 +14,6 @@ const woodartSchema = new Schema({
     created: String,
     imageUrl: String,
     description: String,
-    likesCount: Number,
     reviews: [reviewSchema]
 }, {
     timestamps: true

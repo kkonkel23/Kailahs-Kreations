@@ -1,4 +1,6 @@
-const Woodart = require('../models/woodart')
+const User = require('../models/user')
+const Woodart = require('../models/woodart');
+const user = require('../models/user');
 
 
 module.exports = {
@@ -12,8 +14,12 @@ module.exports = {
 }
 
 function update(req,res){
-    Woodart.findByIdAndUpdate(req.params.id, req.body, function(err, woodart) {
-        res.redirect(`/woodarts/${woodart._id}`)
+    User.findOne({'postedBy': {'_id': req.params.id}}, function(err, result) {
+        if (!result._id.equals(req.user._id)) return res.redirect(`/woodarts/${req.params.id}`);
+        user = req.user;
+        Woodart.findByIdAndUpdate(req.params.id, req.body, function(err, woodart) {
+            res.redirect(`/woodarts/${woodart._id}`)
+        })
     })
 }
 
@@ -24,9 +30,14 @@ function edit(req,res) {
 }
 
 function removeWoodart(req,res){
-    Woodart.findByIdAndRemove(req.params.id, function() {
+    console.log('Email', req.user.email)
+    if (req.user.email === 'kailahkonkel@gmail.com') {
+        Woodart.findByIdAndRemove(req.params.id, function() {
+            res.redirect('/woodarts')
+        })
+    } else {
         res.redirect('/woodarts')
-    })
+    }
 }
 
 function create(req, res) {
