@@ -14,19 +14,20 @@ module.exports = {
 }
 
 function update(req,res){
-    User.findOne({'postedBy': {'_id': req.params.id}}, function(err, result) {
-        if (!result._id.equals(req.user._id)) return res.redirect(`/woodarts/${req.params.id}`);
-        user = req.user;
-        Woodart.findByIdAndUpdate(req.params.id, req.body, function(err, woodart) {
-            res.redirect(`/woodarts/${woodart._id}`)
-        })
+    Woodart.findByIdAndUpdate(req.params.id, req.body, function(err, woodart) {
+        res.redirect(`/woodarts/${woodart._id}`)
     })
 }
 
+
 function edit(req,res) {
-    Woodart.findById(req.params.id, function(err, woodart) {
-        res.render('woodarts/edit', {title: `${woodart.title}`, woodart, user: req.user})
-    })
+    if (req.user.email === 'kailahkonkel@gmail.com') {
+        Woodart.findById(req.params.id, function(err, woodart) {
+            res.render('woodarts/edit', {title: `${woodart.title}`, woodart, user: req.user})
+        })   
+    } else {
+        res.redirect('/woodarts');
+    }
 }
 
 function removeWoodart(req,res){
@@ -45,11 +46,15 @@ function create(req, res) {
     woodart.save(function(err) {
         if (err) return res.render('woodarts/new')
         res.redirect('/woodarts');
-    })
+    })      
 }
 
 function newWoodart(req, res) {
-    res.render('woodarts/new', { title: 'Add New Piece', user: req.user})
+    if (req.user.email === 'kailahkonkel@gmail.com') {
+        res.render('woodarts/new', { title: 'Add New Piece', user: req.user}) 
+    } else {
+        res.redirect('/woodarts');
+    }
 }
 
 function show(req, res){
