@@ -206,7 +206,7 @@ table td {
   font-weight: bold;
 }
 
-.btn:hover {
+.btn:hover, #main-page-btn:hover {
   background-color: #b89a5d;
   color: black;
 }
